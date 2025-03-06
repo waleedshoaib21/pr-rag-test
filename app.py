@@ -1,9 +1,30 @@
 import json
+import re
+from textblob import TextBlob
 
-def process_pull_request(payload):
+def analyze_code_comments(comments):
+    """
+    Uses NLP to analyze the sentiment of code comments.
+    Identifies whether comments are constructive, neutral, or need improvement.
+    """
+    feedback = []
+    
+    for comment in comments:
+        sentiment = TextBlob(comment).sentiment.polarity
+        if sentiment > 0.2:
+            feedback.append(f"✅ Positive comment: \"{comment}\"")
+        elif sentiment < -0.2:
+            feedback.append(f"⚠️ Needs improvement: \"{comment}\"")
+        else:
+            feedback.append(f"🔍 Neutral comment: \"{comment}\"")
+    
+    return feedback
+
+
+def process_pull_request_with_ml(payload):
     """
     Processes a pull request event from GitHub Webhook.
-    Extracts relevant information and simulates a PR review.
+    Extracts relevant information and applies ML-based analysis on PR comments.
     """
     if "pull_request" not in payload:
         return "❌ Not a valid PR event"
@@ -14,30 +35,31 @@ def process_pull_request(payload):
     pr_author = payload["pull_request"]["user"]["login"]
     changed_files = [file["filename"] for file in payload.get("pull_request", {}).get("files", [])]
 
-    # Simulated PR Review Logic
-    review_feedback = []
-    
-    for file in changed_files:
-        if file.endswith(".py"):
-            review_feedback.append(f"✅ `{file}` looks like a Python file. Consider checking for PEP8 compliance.")
-        elif file.endswith(".js"):
-            review_feedback.append(f"✅ `{file}` is a JavaScript file. Ensure best practices for async handling.")
-        else:
-            review_feedback.append(f"🔍 `{file}` was modified. Please review manually.")
+    # Mocked PR comments (In a real scenario, fetch comments from GitHub API)
+    pr_comments = [
+        "This function looks great! Well optimized.",
+        "Your variable names are unclear.",
+        "Consider adding more docstrings to explain your logic.",
+        "The indentation is wrong here, please fix it.",
+        "Nice use of list comprehensions!"
+    ]
 
-    # Construct Review Summary
+    # Apply ML analysis to comments
+    analyzed_comments = analyze_code_comments(pr_comments)
+
+    # Construct ML-Based Review Summary
     review_summary = f"""
-    🚀 **Pull Request Review for {repo_name}**
+    🚀 **Machine Learning-Based PR Review for {repo_name}**
     **PR #{pr_number}:** {pr_title}
     **Author:** {pr_author}
 
     **Changed Files:**
     {json.dumps(changed_files, indent=2)}
 
-    **Review Feedback:**
-    {'\n'.join(review_feedback)}
+    **Code Review Comments Analysis:**
+    {'\n'.join(analyzed_comments)}
 
-    ✅ Please review and provide your comments.
+    ✅ Please review and consider improving the flagged comments.
     """
 
     return review_summary
