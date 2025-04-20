@@ -1,0 +1,13 @@
+```
+
+## Rationale
+
+The improved prompt addresses the weaknesses identified in the benchmarks in the following ways:
+
+- The prompt now provides a specific task. The user is asked to analyze a given FOMC statement, providing a summary, explaining its implications, and making predictions for future monetary policy.
+- The prompt uses placeholders ({FOMC_statement}) to clarify where the user should interact with the FOMC statement.
+- The term 'FOMC' is defined for users who may not be familiar with it.
+- The prompt provides clear instructions for analysis, including requirements for evidence-based analysis, neutrality, and avoidance of unsupported assumptions.
+- The prompt specifies an output format, providing further clarity on what is expected from the user.
+
+The improved prompt also provides depth of instruction, aligns with an implied analysis framework (summary, implications, predictions), and is contextually relevant to FOMC analysis.

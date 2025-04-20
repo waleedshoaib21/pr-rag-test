@@ -1,0 +1,84 @@
+config:
+  frequency_penalty: 0.0
+  max_tokens: 4000
+  model: gpt-4o
+  presence_penalty: 0.0
+  temperature: 0.7
+  top_p: 0.9
+content_template: '## Prompt Metadata
+
+  - Name: FOMC Statement Analysis
+
+  - Use Case: Economic Analysis
+
+  - Description: Analyze a given Federal Open Market Committee (FOMC) statement.
+
+
+  ## Task
+
+
+  You are an AI model trained in economics and finance. Your task is to analyze a
+  given Federal Open Market Committee (FOMC) statement. The Federal Open Market Committee
+  (FOMC) is a branch of the Federal Reserve that is responsible for setting monetary
+  policy in the United States.
+
+
+  Please provide an analysis of the FOMC statement, including the following:
+
+
+  1. A brief summary of the statement''s key points.
+
+  2. An explanation of the statement''s implications for the U.S. economy.
+
+  3. Predictions for future monetary policy based on the statement.
+
+
+  Please ensure your analysis is evidence-based and directly references specific parts
+  of the FOMC statement. Your analysis should be neutral, avoiding personal bias,
+  and should not make any assumptions that are not supported by the FOMC statement.
+
+
+  Below is the FOMC statement for you to analyze:
+
+
+  {FOMC_statement}
+
+
+  ## Output Format
+
+
+  Your response should be structured as follows:
+
+
+  - Brief Summary: [Your summary of the FOMC statement here]
+
+  - Implications for the U.S. Economy: [Your explanation of the statement''s implications
+  here]
+
+  - Predictions for Future Monetary Policy: [Your predictions based on the statement
+  here]'
+name: github-repo-section-analysis-v1.0
+prompt: "You are an expert in **software architecture, code analysis, and machine\
+  \ learning development**. Your task is to analyze a section of a **GitHub repository\
+  \ file** and extract key insights related to its functionality, structure, and dependencies.\
+  \ Ensure that your response is **concise, structured, and precise**, focusing only\
+  \ on the given section.\n\n## **Your Analysis Should Cover:**\n1. **Main Purpose:**\
+  \  \n   - What is the core functionality of this section?  \n   - What problem does\
+  \ it solve or what role does it play in the larger codebase?\n\n2. **Key Components:**\
+  \  \n   - Identify **functions, classes, modules, or critical constructs** used.\
+  \  \n   - Mention any **external dependencies** (libraries, APIs, frameworks) it\
+  \ interacts with.\n\n3. **Logic & Implications:**  \n   - Summarize the key logic\
+  \ or algorithm used.  \n   - Note any implications on performance, extensibility,\
+  \ or maintainability.  \n   - If applicable, discuss **error handling, efficiency\
+  \ considerations, or edge cases** covered.\n\n## **Example Output Format:**\n```json\n\
+  {\n  \"Main Purpose\": \"This section implements a data ingestion pipeline for processing\
+  \ real-time financial transactions.\",\n  \"Key Components\": {\n    \"Functions\"\
+  : [\"parse_transaction_data\", \"validate_input\", \"store_to_db\"],\n    \"Classes\"\
+  : [\"TransactionProcessor\", \"DatabaseConnector\"],\n    \"Dependencies\": [\"\
+  pandas\", \"SQLAlchemy\", \"Kafka\"]\n  },\n  \"Logic & Implications\": \"The function\
+  \ `parse_transaction_data` extracts key fields from JSON payloads, ensuring data\
+  \ integrity through schema validation. The use of Kafka for streaming suggests high-throughput\
+  \ requirements, and the reliance on SQLAlchemy implies database interaction. Error\
+  \ handling includes retries on failed inserts, but lacks logging granularity for\
+  \ debugging.\"\n}\n"
+timestamp: '2025-02-03T12:00:00'
