@@ -1,0 +1,117 @@
+analysis_framework:
+  sentiment_scale:
+    DOVISH: -3
+    HAWKISH: 3
+    MODERATELY_DOVISH: -2
+    MODERATELY_HAWKISH: 2
+    NEUTRAL: 0
+    SLIGHTLY_DOVISH: -1
+    SLIGHTLY_HAWKISH: 1
+  themes:
+  - analysis_points:
+    - Core PCE and CPI trends
+    - Inflation expectations
+    - Price pressures (transitory vs persistent)
+    - Supply chain issues
+    keywords:
+    - inflation
+    - price stability
+    - PCE
+    - CPI
+    - price pressures
+    name: inflation
+  - analysis_points:
+    - Employment growth
+    - Wage trends
+    - Labor force participation
+    - Structural employment issues
+    keywords:
+    - employment
+    - wage
+    - labor
+    - job
+    name: labor_market
+  - analysis_points:
+    - GDP outlook
+    - Consumer spending
+    - Business investment
+    - Global economic conditions
+    keywords:
+    - GDP
+    - growth
+    - consumer spending
+    - investment
+    name: economic_growth
+  - analysis_points:
+    - Market stability
+    - Credit conditions
+    - Banking health
+    - Asset valuations
+    keywords:
+    - financial
+    - market
+    - credit
+    - banking
+    name: financial_conditions
+  - analysis_points:
+    - Interest rate guidance
+    - Balance sheet policies
+    - Policy tools
+    - Risk management approaches
+    keywords:
+    - policy
+    - rate
+    - monetary
+    - tools
+    name: monetary_policy
+config:
+  frequency_penalty: 0.1
+  max_tokens: 3000
+  presence_penalty: 0.1
+  temperature: 0.25
+  top_p: 0.92
+content_template: '# Analysis Task
+
+
+  ## Input
+
+
+  {content}
+
+
+  ## Output Format
+
+  Provide your analysis in a clear, structured format.'
+metadata:
+  author: Blacksmith AI Team
+  description: Advanced analysis with historical context and visualization
+  name: fomc-sentiment-analysis-v3
+  timestamp: '2024-03-20T12:00:00'
+  use_case: Comprehensive FOMC Analysis
+  version: 1.0.0
+output_format:
+  forward_guidance:
+  - clarity
+  - policy_path
+  - time_horizon
+  - conditions
+  overall_sentiment:
+  - score
+  - confidence
+  - primary_drivers
+  - key_quotes
+  risk_assessment:
+  - upside_risks
+  - downside_risks
+  - balance_of_risks
+  summary:
+  - headline_takeaway
+  - main_message
+  - policy_implications
+  - market_impact
+  thematic_analysis:
+  - score
+  - confidence
+  - analysis
+  - key_quotes
+  - notable_changes
