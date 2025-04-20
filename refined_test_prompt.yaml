@@ -1,0 +1,26 @@
+
+metadata:
+  timestamp: "2024-03-20T12:00:00"
+  name: "fomc-sentiment-analysis-v3"
+  version: "1.0.0"
+  use_case: "Comprehensive FOMC Analysis"
+  description: "Advanced analysis with historical context and visualization"
+  author: "Blacksmith AI Team"
+
+config:
+  temperature: 0.25
+  max_tokens: 3000
+  top_p: 0.92
+  frequency_penalty: 0.1
+  presence_penalty: 0.1
+
+content_template: |
+  # Analysis Task
+
+  ## Input
+
+  {content}
+
+  ## Output Format
+
+  Provide your analysis in a clear, structured format.
