@@ -1,0 +1,12 @@
+```
+
+## Rationale
+The improved prompt addresses the weaknesses identified in the benchmarks by:
+
+1. Providing context and definition for 'FOMC': The prompt now includes a brief explanation of what the FOMC is and why its statements are significant. This makes the prompt more accessible and understandable.
+2. Specifying actions to be taken: The prompt now provides clear, specific instructions for analyzing the FOMC statement. It outlines the analysis framework to be used, the themes to consider, and the format in which the analysis should be presented.
+3. Including appropriate placeholders: The prompt now includes a placeholder for the date of the FOMC statement to be analyzed. This encourages specificity in the analysis.
+4. Preventing hallucinations: By explicitly requiring an evidence-based analysis and including direct quotes from the FOMC statement, the prompt prevents the AI from making unfounded assumptions or interpretations.
+5. Maintaining neutrality and avoiding bias: By using a clearly defined sentiment scale and requiring a neutral, evidence-based analysis, the prompt ensures that the AI's analysis remains unbiased.
+6. Providing depth of instruction: The prompt now provides detailed instructions for each section of the analysis, ensuring that the AI's output is thorough and comprehensive.
+7. Aligning with the analysis framework and output format: The improved prompt closely aligns with the provided analysis framework and output format, ensuring that the AI's analysis meets the desired criteria.

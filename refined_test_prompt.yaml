@@ -1,0 +1,169 @@
+analysis_framework:
+  sentiment_scale:
+    DOVISH: -3
+    HAWKISH: 3
+    MODERATELY_DOVISH: -2
+    MODERATELY_HAWKISH: 2
+    NEUTRAL: 0
+    SLIGHTLY_DOVISH: -1
+    SLIGHTLY_HAWKISH: 1
+  themes:
+  - analysis_points:
+    - Core PCE and CPI trends
+    - Inflation expectations
+    - Price pressures (transitory vs persistent)
+    - Supply chain issues
+    keywords:
+    - inflation
+    - price stability
+    - PCE
+    - CPI
+    - price pressures
+    name: inflation
+  - analysis_points:
+    - Employment growth
+    - Wage trends
+    - Labor force participation
+    - Structural employment issues
+    keywords:
+    - employment
+    - wage
+    - labor
+    - job
+    name: labor_market
+  - analysis_points:
+    - GDP outlook
+    - Consumer spending
+    - Business investment
+    - Global economic conditions
+    keywords:
+    - GDP
+    - growth
+    - consumer spending
+    - investment
+    name: economic_growth
+  - analysis_points:
+    - Market stability
+    - Credit conditions
+    - Banking health
+    - Asset valuations
+    keywords:
+    - financial
+    - market
+    - credit
+    - banking
+    name: financial_conditions
+  - analysis_points:
+    - Interest rate guidance
+    - Balance sheet policies
+    - Policy tools
+    - Risk management approaches
+    keywords:
+    - policy
+    - rate
+    - monetary
+    - tools
+    name: monetary_policy
+config:
+  frequency_penalty: 0.1
+  max_tokens: 3000
+  presence_penalty: 0.1
+  temperature: 0.25
+  top_p: 0.92
+content_template: '## Prompt
+
+  You are an AI economist with expertise in monetary policy and financial markets.
+  Your task is to conduct a comprehensive analysis of a specific Federal Open Market
+  Committee (FOMC) statement.
+
+
+  The FOMC is the branch of the Federal Reserve that is responsible for making key
+  decisions about interest rates and the growth of the United States money supply.
+  These decisions are communicated through their statements, which have significant
+  impact on global financial markets.
+
+
+  The statement we are analyzing is from (INSERT DATE OF THE FOMC STATEMENT). Please
+  follow the analysis framework outlined below, and provide your responses in the
+  output format described.
+
+
+  ## Analysis Framework
+
+  Use the sentiment scale and keyword themes provided for your analysis. The sentiment
+  scale ranges from DOVISH (-3) to HAWKISH (+3), with varying degrees in between.
+  Consider the following themes:
+
+
+  1. Inflation: Analyze core PCE and CPI trends, inflation expectations, price pressures
+  (transitory vs persistent), and supply chain issues.
+
+  2. Labor Market: Review employment growth, wage trends, labor force participation,
+  and structural employment issues.
+
+  3. Economic Growth: Evaluate GDP outlook, consumer spending, business investment,
+  and global economic conditions.
+
+  4. Financial Conditions: Assess market stability, credit conditions, banking health,
+  and asset valuations.
+
+  5. Monetary Policy: Examine interest rate guidance, balance sheet policies, policy
+  tools, and risk management approaches.
+
+
+  ## Output Format
+
+  Your analysis should include the following sections:
+
+
+  1. Forward Guidance: Describe the clarity of the statement, the suggested policy
+  path, the time horizon outlined, and the conditions specified.
+
+  2. Overall Sentiment: Give a score, indicate your confidence level, list the primary
+  drivers, and include key quotes from the statement.
+
+  3. Risk Assessment: Identify the upside risks, downside risks, and balance of risks.
+
+  4. Summary: Provide a headline takeaway, the main message, policy implications,
+  and possible market impacts.
+
+  5. Thematic Analysis: Give a score, indicate your confidence level, provide an analysis
+  for each theme, and include key quotes from the statement. Note any notable changes
+  from previous statements.
+
+
+  Remember, your analysis should be evidence-based, neutral, and as specific as possible.
+  Include direct quotes from the FOMC statement where necessary to support your findings.'
+metadata:
+  author: Blacksmith AI Team
+  description: Advanced analysis with historical context and visualization
+  name: fomc-sentiment-analysis-v3
+  timestamp: '2024-03-20T12:00:00'
+  use_case: Comprehensive FOMC Analysis
+  version: 1.0.0
+output_format:
+  forward_guidance:
+  - clarity
+  - policy_path
+  - time_horizon
+  - conditions
+  overall_sentiment:
+  - score
+  - confidence
+  - primary_drivers
+  - key_quotes
+  risk_assessment:
+  - upside_risks
+  - downside_risks
+  - balance_of_risks
+  summary:
+  - headline_takeaway
+  - main_message
+  - policy_implications
+  - market_impact
+  thematic_analysis:
+  - score
+  - confidence
+  - analysis
+  - key_quotes
+  - notable_changes
