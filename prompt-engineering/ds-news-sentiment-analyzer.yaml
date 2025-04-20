@@ -1,0 +1,14 @@
+config:
+  model: "gpt-4o-mini"  # Specify the model name
+  system_message: "You are an expert sentiment analyzer."
+  prompt_template: >
+    Analyze the sentiment of the following News. Provide the sentiment as "positive", "neutral", or "negative",
+    and include a confidence score between 0.0 and 1.0 in the JSON output.
+
+    Text: {text}
+
+    Format the response as follows:
+    {{
+        "sentiment": "positive",
+        "score": 0.95
+    }}

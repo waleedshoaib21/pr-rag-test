@@ -1,0 +1,16 @@
+timestamp: "2024-12-18T12:00:00"
+name: ds-github-yellow-cat-running-v1.0
+prompt: "Explain the concept of LASSO regression in simple terms."
+config:
+  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  temperature: 0.7
+  max_tokens: 200
+  top_p: 0.9
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+  
+embedding_model:
+  name: "projects/blacksmith-443107/locations/us-central1/endpoints/3234386076428664832"
+  project_id: "blacksmith-443107"
+  location: "us-central1"  # optional, defaults to us-central1
+

@@ -1,0 +1,98 @@
+timestamp: "2024-03-20T12:00:00"
+name: us-research-stage2-red-monkey-dancing
+blacksmith_version: 1.0.0
+research_stage: 2
+prompt: |
+  role:
+    - You are an advanced AI assistant and quantitative finance expert specializing in algorithm design, machine learning, and financial risk analysis.
+    - Your expertise includes recommending targeted improvements for algorithmic systems, conducting SWOT and risk analyses, and citing academic and practical resources.
+
+  scenario:
+    - You have access to the open-source repository `https://github.com/deerfieldgreen/quantitative-algorithms`, which houses multiple trading and financial algorithms.
+    - Your goal is to analyze each algorithm individually, recommend improvements, and evaluate its strengths, weaknesses, opportunities, threats (SWOT), and associated risks.
+
+  inputs:
+    repository:
+      url: https://github.com/deerfieldgreen/quantitative-algorithms
+      description: Source code repository containing various trading and financial algorithms.
+    analysis_criteria:
+      - Algorithm-by-algorithm evaluation, not generalized.
+      - Recommendations for enhancements to improve accuracy, efficiency, robustness, or usability.
+      - Identification of specific strengths and weaknesses for each algorithm.
+      - Suggestions for addressing threats and mitigating risks.
+    resources_to_consider:
+      - Papers: Relevant academic and research papers.
+      - GitHub: Open-source projects and implementations.
+      - YouTube: Tutorials and expert discussions.
+      - Books: Authoritative texts on quantitative finance and ML.
+      - News: Financial market developments impacting algo performance.
+      - Journals: Peer-reviewed research.
+      - Jupyter Notebooks: Example implementations supporting theoretical improvements.
+
+  outputs:
+    analysis:
+      recommendations:
+        - For each algorithm in the repository, provide targeted improvements:
+          - Refactor code for efficiency and scalability.
+          - Integrate advanced ML models or GNNs for better feature extraction or predictions.
+          - Enhance risk management mechanisms.
+          - Add modularity for adaptability to different market conditions.
+      swot_analysis:
+        - Strengths: Highlight what each algorithm excels at.
+        - Weaknesses: Identify areas for improvement or technical debt.
+        - Opportunities: Suggest ways to expand its capabilities or applications.
+        - Threats: Point out external risks, such as regulatory, market, or operational risks.
+      risk_assessment:
+        - Detail specific risks associated with each algorithm.
+        - Recommend mitigation strategies for each identified risk.
+      references:
+        - Cite academic papers, GitHub repositories, YouTube videos, and other resources relevant to the recommendations.
+      jupyter_notebooks:
+        - Draft notebooks demonstrating proposed improvements, experiments, or validations.
+        - Include relevant data pipelines, visualization, and testing scripts.
+      actionable_summary:
+        - Provide a concise, prioritized list of actions for each algorithm based on the recommendations, SWOT analysis, and risk assessment.
+
+config:
+  models: 
+    - gpt-4
+    - mistral-8x22b
+    - llama-3.3
+    - claude-3.5-sonnet
+  temperature: 0.7
+  max_tokens: 750
+  top_p: 0.9
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+
+embedding_model:
+  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
+  project_id: "your-project-id"
+  location: "us-central1"
+
+metadata:
+  role: "Algorithm Analyst"
+  scenario: "Repository Analysis"
+  inputs:
+    - Repository code
+    - Analysis criteria
+    - Reference materials
+  outputs:
+    - Algorithm recommendations
+    - SWOT analysis
+    - Risk assessment
+    - Implementation guidance
+  author: "blacksmith-team"
+  last_updated: "2024-03-20"
+  version: "1.0.0"
+  tags:
+    - quantitative-finance
+    - algorithm-analysis
+    - risk-assessment
+    - machine-learning
+  dependencies:
+    - python>=3.8
+    - jupyter>=1.0.0
+    - pandas>=1.5.0
+    - numpy>=1.20.0
+  license: "MIT"

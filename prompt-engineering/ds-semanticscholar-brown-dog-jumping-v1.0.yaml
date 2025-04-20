@@ -1,0 +1,11 @@
+timestamp: "2024-12-18T12:00:00"
+name: ds-semanticscholar-brown-dog-jumping-v1.0
+prompt: "Explain the concept of LASSO regression in simple terms."
+config:
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 200
+  top_p: 0.9
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+

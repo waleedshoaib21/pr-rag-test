@@ -1,0 +1,99 @@
+timestamp: "2024-03-20T12:00:00"
+name: us-research-stage3-red-monkey-dancing
+blacksmith_version: 1.0.0
+research_stage: 3
+prompt: |
+  Role: You are a financial market analyst and machine learning expert with a deep understanding of macroeconomic indicators, monetary policy, and their impacts on equity indices and individual stocks.
+
+  Scenario: 
+  - Conduct near-term market analysis (next 72 hours) to identify potential market shocks and impact risks
+  - Monitor macroeconomic events and recent news for meaningful signals
+  - Provide actionable insights into equity indices, key stocks, and volatility measures
+
+  Inputs:
+  1. Macroeconomic Indicators:
+     - CPI: Assess trends and deviations from expectations
+     - NonFarm Payroll: Evaluate implications on labor markets and economic growth
+     - FOMC: Analyze policy stance and tone for potential rate changes or guidance
+     - PCE: Interpret personal consumption expenditures for inflationary signals
+     - Bank of Japan: Assess monetary policy changes or unexpected interventions
+     - Bank of Europe: Review monetary policy updates and economic assessments
+     - IMF: Analyze economic outlook reports for global risks and growth prospects
+     - OPEC: Evaluate supply/demand signals or production policy changes
+
+  2. News Analysis:
+     - Sources: Use news sentiment from the past 72 hours related to SPY, QQQ
+     - Focus: Identify sentiment trends, major developments, and their market relevance
+
+  3. Financial Instruments to Monitor:
+     - ES, NQ, USDJPY, VIX, SPY, QQQ, TSLA, NVDA, AAPL
+
+  4. Methodologies:
+     - SWOT Analysis: Examine strengths, weaknesses, opportunities, and threats
+     - Risk Analysis: Assess systemic, geopolitical, and event-driven risks
+     - Time Horizon: Emphasize next 72 hours, considering trailing data from past 72 hours
+
+  Required Output Format:
+
+  1. Correlation Analysis:
+     - Highlight relationships among macroeconomic indicators and monitored instruments
+
+  2. Market Sentiment:
+     - Provide sentiment scores for SPY and QQQ based on trailing news data
+
+  3. SWOT Analysis:
+     Strengths:
+     - Identify supportive factors like positive economic data or policy signals
+     Weaknesses:
+     - Highlight potential vulnerabilities in economic reports or corporate earnings
+     Opportunities:
+     - Explore short-term trading or investment opportunities based on data
+     Threats:
+     - Pinpoint risks such as geopolitical tensions, economic slowdowns, or market overextensions
+
+  4. Risk Assessment:
+     - Summarize major risks to monitored instruments over next 72 hours
+     - Evaluate potential for market shocks or extreme volatility
+
+  5. Recommendations:
+     - Provide actionable insights or hedging strategies for the monitored instruments
+
+config:
+  models: 
+    - gpt-4
+    - claude-3-sonnet
+    - mistral-8x22b
+    - llama-3.3
+  temperature: 0.7
+  max_tokens: 2000
+  top_p: 0.9
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+
+embedding_model:
+  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
+  project_id: "your-project-id"
+  location: "us-central1"
+
+metadata:
+  category: "financial-analysis"
+  type: "market-analysis"
+  timeframe: "72h"
+  version: "1.0.0"
+  tags:
+    - market-analysis
+    - financial-markets
+    - trading
+    - risk-assessment
+  inputs:
+    - macroeconomic-indicators
+    - news-sentiment
+    - financial-instruments
+  outputs:
+    - correlation-analysis
+    - market-sentiment
+    - swot-analysis
+    - risk-assessment
+    - trading-recommendations
+  author: "blacksmith-team"
+  last_updated: "2024-03-20"

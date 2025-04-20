@@ -1,0 +1,4 @@
+embedding_model:
+  name: text-embedding-ada-002  # OpenAI model name for embeddings
+  project_id: blacksmith-443107  # Optional, no longer needed for OpenAI
+  location: us-central1         # Optional, no longer needed for OpenAI

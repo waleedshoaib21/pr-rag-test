@@ -1,0 +1,37 @@
+timestamp: "2025-01-02T10:00:00"
+name: ds-graph-ml-market-insights-v1.0
+blacksmith_version: "1.0.0"
+prompt: |
+  Generate a comprehensive research recommendation report focusing on:
+  1. **Latest Trends** in machine learning (ML) and graph neural networks (GNNs) over the last 2–3 weeks.
+  2. **Top Instruments/Symbols** discussed in recent market analyses.
+  3. Emerging **Graph ML Theories** and their practical applications.
+  4. **Connections** between graph learning, market forecasting, and network dynamics.
+  5. High-impact **publications and conferences** to follow in these domains.
+
+  Prioritize actionable insights for researchers and developers in financial markets, focusing on:
+  - Predictive modeling
+  - Graph-based anomaly detection
+  - Sentiment analysis using GNNs
+
+  Structure your response into clearly defined sections, including:
+  - Abstract
+  - Key Findings
+  - References for Further Reading
+
+config:
+  model: "gpt-4o, claude-3-5-sonnet-20240620, llama-3.3, mistral8x22b"
+  temperature: 0.65
+  max_tokens: 750
+  top_p: 0.85
+  frequency_penalty: 0.0
+  presence_penalty: 0.1
+
+
+
+embedding_model:
+  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
+  project_id: "your-project-id"
+  location: "us-central1"  # optional, defaults to us-central1
+
+

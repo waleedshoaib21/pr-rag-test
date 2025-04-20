@@ -1,0 +1,32 @@
+timestamp: "2024-03-20T12:00:00"
+name: ds-mle-purple-duck-barking
+blacksmith_version: 1.0.0
+prompt: |
+  Develop a Jupyter notebook that constructs a graph of [symbols] where nodes represent instruments and edges are created based on correlations above a threshold. Train a Graph Convolutional Network (GCN) to predict the next 15-minute return for a target symbol using node embeddings. Visualize embeddings in 2D using t-SNE and compare GCN predictions with a baseline linear regression model.
+
+config:
+  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  temperature: 0.7
+  max_tokens: 750
+  top_p: 0.9
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+
+embedding_model:
+  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
+  project_id: "your-project-id"
+  location: "us-central1"
+
+metadata:
+  role: "Graph data scientist"
+  scenario: "Financial instruments GNN prediction"
+  inputs:
+    - Graph with symbol nodes and correlation-based edges
+    - Historical returns and volatility features
+    - Graph Convolutional Network model
+  outputs:
+    - 2D node embeddings visualization (t-SNE)
+    - Predicted vs actual returns comparison
+    - GCN vs linear regression baseline comparison
+
+

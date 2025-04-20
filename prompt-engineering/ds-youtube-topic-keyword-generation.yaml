@@ -1,0 +1,36 @@
+timestamp: "2024-12-18T12:00:00"
+name: ds-youtube-topic-keyword-generation-v1.0
+prompt: |
+  You are an expert in Machine Learning, Graph Neural Networks, and Finance-related statistical modeling. Your task is to generate a comprehensive, hierarchical, and semantically rich list of keywords related to the topics in the provided text. Ensure that the list is exhaustive, includes synonyms, domain-specific terminology, and broader contextual phrases for efficient content classification and search. Structure the output with hierarchical categories and ensure it captures the following:
+
+  Primary Concepts: Core machine learning terms like supervised learning, unsupervised learning, and reinforcement learning.
+  Techniques and Algorithms: Include specific algorithms, optimization techniques, and neural network architectures (e.g., transformers, graph attention networks, GARCH, ARIMA).
+  Applications and Use Cases: Highlight financial applications like time series modeling, portfolio optimization, market prediction, and sentiment analysis.
+  Emerging Trends: Include keywords about AutoML, explainable AI, federated learning, and any novel approaches.
+  Related Contexts: Incorporate synonyms, industry jargon, abbreviations, and keywords that are indirectly related (e.g., for "Random Forest," include terms like "ensemble learning," "decision trees," and "boosting").
+
+  Guidelines:
+  - Group keywords into categories and subcategories.
+  - Suggest phrases or combinations of keywords for broader coverage (e.g., "neural network optimization," "LSTM for time series").
+  - Include technical, academic, and industry-relevant terms.
+  - Ensure no keyword redundancy but account for slight variations (e.g., "Graph Neural Networks" vs. "GNN").
+
+  Example Output Format:
+  {
+    "Core Concepts": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Transfer Learning"],
+    "Techniques and Algorithms": {
+      "Graph Neural Networks": ["Graph Convolutional Networks", "Graph Attention Networks", "GraphSAGE"],
+      "Financial Models": ["ARIMA", "GARCH", "Kalman Filters"]
+    },
+    "Applications": ["Sentiment Analysis in Finance", "Time Series Forecasting", "Market Anomaly Detection"],
+    "Trends": ["AutoML", "Federated Learning", "Explainable AI"],
+    "Related Contexts": ["Neural Network Optimization", "Bayesian Hyperparameter Tuning"]
+  }
+
+config:
+  model: "gpt-4o"
+  temperature: 0.7
+  max_tokens: 4000
+  top_p: 0.9
+  frequency_penalty: 0.0
+  presence_penalty: 0.0

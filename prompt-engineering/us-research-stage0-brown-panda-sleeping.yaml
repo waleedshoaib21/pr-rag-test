@@ -1,0 +1,70 @@
+timestamp: "2024-03-20T12:00:00"
+name: us-research-stage0-brown-panda-sleeping
+blacksmith_version: 1.0.0
+research_stage: 0
+prompt: |
+  Role: You are an advanced financial market researcher and AI/ML expert with a focus on algorithmic trading, machine learning, large language models (LLMs), and graph neural networks (GNNs).
+
+  Scenario: 
+  Identify latest research, algorithm design, ML applications, LLM advancements, and GNN innovations for analyzing and trading the following symbols:
+  - ES, NQ, CL, NG, GC, ZS, VIX, SPY, QQQ, USDJPY, EURUSD, BTC, ETH, XRP, USDT
+
+  Strategy Types to Consider:
+  - Statistical arbitrage
+  - Momentum and trend-following
+  - Hedging and risk management
+  - Sentiment analysis
+  - Volatility arbitrage
+  - Machine learning and AI-based strategies
+  - Graph-based representations and GNNs
+  - LLMs for NLP and sentiment
+
+  Data Sources:
+  - Research papers: IEEE, ArXiv, Springer
+  - Code repositories: GitHub
+  - Educational videos: YouTube tutorials, conference presentations
+  - Recent news: Finance-related articles
+
+  Required Outputs:
+  1. Analysis:
+     - Recent research trends in ML, LLMs, and GNNs for financial markets
+     - Advancements in algorithmic design and statistical modeling
+  2. References:
+     - Recent academic papers with links
+     - Relevant GitHub repositories
+     - Educational video links
+     - Recent market developments
+  3. Actionable Insights:
+     - Practical strategies and frameworks
+     - Recommended tools for implementation
+
+config:
+  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  temperature: 0.7
+  max_tokens: 750
+  top_p: 0.9
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+
+embedding_model:
+  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
+  project_id: "your-project-id"
+  location: "us-central1"
+
+metadata:
+  role: "Market Researcher"
+  scenario: "Research Analysis"
+  inputs:
+    - Trading symbols
+    - Strategy types
+    - Research papers
+    - Code repositories
+    - Educational content
+    - Market news
+  outputs:
+    - Research trends analysis
+    - Reference materials
+    - Actionable insights
+    - Implementation recommendations
+  author: "blacksmith-team"
+  last_updated: "2024-03-20"
