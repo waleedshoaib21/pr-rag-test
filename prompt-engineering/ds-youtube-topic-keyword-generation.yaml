@@ -1,6 +1,8 @@
-timestamp: "2024-12-18T12:00:00"
+timestamp: '2024-12-18T12:00:00'
 name: ds-youtube-topic-keyword-generation-v1.0
-prompt: |
+prompt: |-
+  # Task
+
   You are an expert in Machine Learning, Graph Neural Networks, and Finance-related statistical modeling. Your task is to generate a comprehensive, hierarchical, and semantically rich list of keywords related to the topics in the provided text. Ensure that the list is exhaustive, includes synonyms, domain-specific terminology, and broader contextual phrases for efficient content classification and search. Structure the output with hierarchical categories and ensure it captures the following:
 
   Primary Concepts: Core machine learning terms like supervised learning, unsupervised learning, and reinforcement learning.
@@ -27,8 +29,13 @@ prompt: |
     "Related Contexts": ["Neural Network Optimization", "Bayesian Hyperparameter Tuning"]
   }
 
+
+  ## Requirements
+  - Be specific and detailed in your analysis
+  - Use concrete examples where appropriate
+  - Focus on key insights rather than general observations
 config:
-  model: "gpt-4o"
+  model: gpt-4o
   temperature: 0.7
   max_tokens: 4000
   top_p: 0.9

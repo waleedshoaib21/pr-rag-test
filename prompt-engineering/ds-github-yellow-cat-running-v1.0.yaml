@@ -1,16 +1,21 @@
-timestamp: "2024-12-18T12:00:00"
+timestamp: '2024-12-18T12:00:00'
 name: ds-github-yellow-cat-running-v1.0
-prompt: "Explain the concept of LASSO regression in simple terms."
+prompt: |-
+  Using simple, non-technical language, explain the concept of LASSO regression. Your explanation should cover the following points:
+  1. What is LASSO regression?
+  2. How does LASSO regression work?
+  3. What are the main benefits and drawbacks of using LASSO regression?
+  4. Provide a practical example of a situation where LASSO regression would be useful.
+
+  Please ensure your explanation is easy to understand for someone without a background in data science or statistics.
 config:
-  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  models: gpt-4o, mistral8x22b, llama3.3, claude3.5sonet
   temperature: 0.7
   max_tokens: 200
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-  
 embedding_model:
-  name: "projects/blacksmith-443107/locations/us-central1/endpoints/3234386076428664832"
-  project_id: "blacksmith-443107"
-  location: "us-central1"  # optional, defaults to us-central1
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1
