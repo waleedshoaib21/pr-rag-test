@@ -1,29 +1,27 @@
-timestamp: "2025-01-02T10:00:00"
 name: ds-github-meow-bark-quack
-prompt: 
+timestamp: '2025-04-21T22:50:30'
+prompt: |-
+  ## Prompt Name/ID
+  ds-github-meow-bark-quack
 
+  ## Task Description
+  In this task, your job is to analyze a dataset containing audio files of different animal sounds, which include cat meows, dog barks, and duck quacks.
+
+  1. Load the dataset from GitHub (the link will be provided).
+  2. Preprocess the audio files to extract relevant features.
+  3. Perform exploratory data analysis to understand the patterns in the data.
+  4. Develop a model that can accurately distinguish between the different animal sounds.
+  5. Validate your model using appropriate metrics.
+
+  ## Deliverables
+  1. A Python script with the code for steps 1-5.
+  2. A report detailing your approach, findings, and the performance of your model.
+
+  ## Constraints
+  1. Use only open-source libraries.
+  2. Ensure your code is well-commented and follows best practices.
+  3. Your model should achieve an accuracy of at least 85%.
 config:
-  model: "llama-3.3"
-  temperature: 0.65
-  max_tokens: 750
-  top_p: 0.85
-  frequency_penalty: 0.0
-  presence_penalty: 0.1
-
-
-
-
-
-embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"  # optional, defaults to us-central1
-
-
-gpt-4o, claude-3-5-sonnet-20240620, llama-3.3, mistral8x22b
-
-
-1. use yaml
-2. use Vertex
-3. Iterate through the 4 models
-4. Publish to PubSub TOPIC
+  model: gpt-4o
+  temperature: 0.7
+  max_tokens: 4000

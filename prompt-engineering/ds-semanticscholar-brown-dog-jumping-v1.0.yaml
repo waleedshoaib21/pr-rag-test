@@ -1,11 +1,15 @@
-timestamp: "2024-12-18T12:00:00"
+timestamp: '2024-12-18T12:00:00'
 name: ds-semanticscholar-brown-dog-jumping-v1.0
-prompt: "Explain the concept of LASSO regression in simple terms."
+prompt: |-
+  Write a concise and simple explanation of LASSO regression. Your explanation should be understandable for someone who is new to the field of machine learning. Include the following points in your explanation:
+  1. A brief introduction to what LASSO regression is.
+  2. The purpose or application of LASSO regression.
+  3. A simple example to illustrate how LASSO regression works.
+  Please avoid using complex jargon or equations. The goal should be to make the concept as clear as possible for a beginner.
 config:
-  model: "gpt-4"
+  model: gpt-4
   temperature: 0.7
   max_tokens: 200
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-

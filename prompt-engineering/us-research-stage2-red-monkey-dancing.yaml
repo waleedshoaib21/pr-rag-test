@@ -1,8 +1,12 @@
-timestamp: "2024-03-20T12:00:00"
+timestamp: '2024-03-20T12:00:00'
 name: us-research-stage2-red-monkey-dancing
 blacksmith_version: 1.0.0
 research_stage: 2
-prompt: |
+prompt: |-
+  # Task
+
+  ## Instructions
+
   role:
     - You are an advanced AI assistant and quantitative finance expert specializing in algorithm design, machine learning, and financial risk analysis.
     - Your expertise includes recommending targeted improvements for algorithmic systems, conducting SWOT and risk analyses, and citing academic and practical resources.
@@ -53,46 +57,58 @@ prompt: |
       actionable_summary:
         - Provide a concise, prioritized list of actions for each algorithm based on the recommendations, SWOT analysis, and risk assessment.
 
+
+  ## Output Format
+  Provide your analysis in a clear, structured format.
+
+  ## Requirements
+  - Be specific and detailed in your analysis
+  - Use concrete examples where appropriate
+  - Focus on key insights rather than general observations
+
+  ## Suggested Structure
+  1. Summary
+  2. Key Points
+  3. Detailed Analysis
+  4. Conclusion
 config:
-  models: 
-    - gpt-4
-    - mistral-8x22b
-    - llama-3.3
-    - claude-3.5-sonnet
+  models:
+  - gpt-4
+  - mistral-8x22b
+  - llama-3.3
+  - claude-3.5-sonnet
   temperature: 0.7
   max_tokens: 750
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-
 embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1
 metadata:
-  role: "Algorithm Analyst"
-  scenario: "Repository Analysis"
+  role: Algorithm Analyst
+  scenario: Repository Analysis
   inputs:
-    - Repository code
-    - Analysis criteria
-    - Reference materials
+  - Repository code
+  - Analysis criteria
+  - Reference materials
   outputs:
-    - Algorithm recommendations
-    - SWOT analysis
-    - Risk assessment
-    - Implementation guidance
-  author: "blacksmith-team"
-  last_updated: "2024-03-20"
-  version: "1.0.0"
+  - Algorithm recommendations
+  - SWOT analysis
+  - Risk assessment
+  - Implementation guidance
+  author: blacksmith-team
+  last_updated: '2024-03-20'
+  version: 1.0.0
   tags:
-    - quantitative-finance
-    - algorithm-analysis
-    - risk-assessment
-    - machine-learning
+  - quantitative-finance
+  - algorithm-analysis
+  - risk-assessment
+  - machine-learning
   dependencies:
-    - python>=3.8
-    - jupyter>=1.0.0
-    - pandas>=1.5.0
-    - numpy>=1.20.0
-  license: "MIT"
+  - python>=3.8
+  - jupyter>=1.0.0
+  - pandas>=1.5.0
+  - numpy>=1.20.0
+  license: MIT
