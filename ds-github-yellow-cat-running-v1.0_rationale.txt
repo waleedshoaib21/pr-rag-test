@@ -1,0 +1,13 @@
+# Prompt Refinement
+
+This prompt has been refined to improve its structure and clarity based on benchmark results.
+
+## Identified Issues
+
+- Failed to evaluate clarity
+
+## Improvements
+
+- Added clearer section headers
+- Improved structure for better readability
+- Enhanced specificity where needed
