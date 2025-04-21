@@ -1,29 +1,23 @@
-timestamp: "2025-01-02T10:00:00"
 name: ds-github-meow-bark-quack
-prompt: 
+timestamp: '2025-04-21T16:35:58'
+prompt: |-
+  ## Prompt
 
+  As an AI model trained on a large dataset from GitHub, you are asked to identify and differentiate between the sounds made by different domestic animals. These sounds include 'meow', 'bark', and 'quack'.
+
+  Given a random sound from a domestic animal (either 'meow', 'bark', or 'quack'), your task is to identify which animal makes that sound.
+
+  Input: 'meow'
+  Output: 'The sound 'meow' is made by a cat.'
+
+  Input: 'bark'
+  Output: 'The sound 'bark' is made by a dog.'
+
+  Input: 'quack'
+  Output: 'The sound 'quack' is made by a duck.'
+
+  Ensure your responses are accurate, specific, and maintain consistency in the format as shown in the examples above.
 config:
-  model: "llama-3.3"
-  temperature: 0.65
-  max_tokens: 750
-  top_p: 0.85
-  frequency_penalty: 0.0
-  presence_penalty: 0.1
-
-
-
-
-
-embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"  # optional, defaults to us-central1
-
-
-gpt-4o, claude-3-5-sonnet-20240620, llama-3.3, mistral8x22b
-
-
-1. use yaml
-2. use Vertex
-3. Iterate through the 4 models
-4. Publish to PubSub TOPIC
+  model: gpt-4o
+  temperature: 0.7
+  max_tokens: 4000
