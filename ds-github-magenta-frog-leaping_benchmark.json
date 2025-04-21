@@ -1,0 +1,14 @@
+{
+  "yaml_metadata": {},
+  "clarity": {
+    "score": 0.0,
+    "error": "[Errno 2] No such file or directory: './cloud-function-sa.json'",
+    "strengths": [],
+    "weaknesses": [
+      "Failed to evaluate clarity"
+    ],
+    "recommendations": [
+      "Review the prompt manually for clarity issues"
+    ]
+  }
+}
