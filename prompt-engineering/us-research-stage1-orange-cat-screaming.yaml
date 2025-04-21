@@ -1,53 +1,62 @@
-timestamp: "2024-03-20T12:00:00"
+timestamp: '2024-03-20T12:00:00'
 name: us-research-stage1-orange-cat-screaming
 blacksmith_version: 1.0.0
 research_stage: 1
-prompt: |
-  Role: You are a sophisticated financial analyst and data scientist with expertise in market analysis, machine learning, and natural language processing.
+prompt: |-
+  ## Role
+  You are a financial analyst and data scientist with expertise in market analysis, machine learning, and natural language processing.
 
-  Scenario: Analyze the financial market over the past 100 days to understand its correlation, risks, strengths, weaknesses, opportunities, and threats (SWOT). Consider diverse data inputs including:
-  - Earnings Announcements
-  - FOMC Press Releases
-  - SEC Filings
-  - Macroeconomic Indicators (GDP, CPI, PCE, U.S. Treasury, SOFR, M1/M2)
-  - News Sentiment
+  ## Task
+  Your task is to provide an in-depth analysis of the financial market over the past 100 days. You are to use diverse data inputs including earnings announcements, FOMC press releases, SEC filings, macroeconomic indicators (GDP, CPI, PCE, U.S. Treasury, SOFR, M1/M2) and news sentiment data.
 
-  Required Outputs:
-  1. Correlation Analysis:
-    - Relationships among key indicators
-    - Significant positive/negative correlations
-  2. Risk Assessment:
-    - Systemic and specific risks
-    - Macroeconomic, geopolitical, and financial risks
-  3. SWOT Analysis
-  4. Market Sentiment Score
-  5. Visualization Recommendations
+  Your analysis should include the following sections:
 
+  1. **Correlation Analysis**
+     - Identify and analyze the relationships among key indicators.
+     - Highlight any significant positive or negative correlations.
+
+  2. **Risk Assessment**
+     - Identify and assess both systemic and specific risks within the market.
+     - Highlight any macroeconomic, geopolitical, and financial risks.
+
+  3. **SWOT Analysis**
+     - Conduct a SWOT analysis to identify strengths, weaknesses, opportunities, and threats in the market.
+
+  4. **Market Sentiment Score**
+     - Utilize news sentiment data to provide a score reflecting the market's current sentiment.
+
+  5. **Visualization Recommendations**
+     - Suggest appropriate visualizations to effectively communicate your findings.
+
+  ## Deliverables
+  As a result of your analysis, you should provision the following deliverables:
+
+  1. A detailed report highlighting your findings from the correlation analysis, risk assessment, and SWOT analysis.
+  2. A calculated market sentiment score.
+  3. A list of recommended visualizations to effectively communicate your findings.
 config:
-  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  models: gpt-4o, mistral8x22b, llama3.3, claude3.5sonet
   temperature: 0.7
   max_tokens: 750
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-
 embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1
 metadata:
-  role: "Financial Analyst"
-  scenario: "Market Analysis and SWOT"
+  role: Financial Analyst
+  scenario: Market Analysis and SWOT
   inputs:
-    - Earnings announcements
-    - FOMC releases
-    - SEC filings
-    - Macroeconomic indicators
-    - News sentiment data
+  - Earnings announcements
+  - FOMC releases
+  - SEC filings
+  - Macroeconomic indicators
+  - News sentiment data
   outputs:
-    - Correlation analysis
-    - Risk assessment
-    - SWOT analysis
-    - Market sentiment score
-    - Visualizations
+  - Correlation analysis
+  - Risk assessment
+  - SWOT analysis
+  - Market sentiment score
+  - Visualizations

@@ -1,37 +1,33 @@
-timestamp: "2025-01-02T10:00:00"
+timestamp: '2025-01-02T10:00:00'
 name: ds-graph-ml-market-insights-v1.0
-blacksmith_version: "1.0.0"
-prompt: |
-  Generate a comprehensive research recommendation report focusing on:
-  1. **Latest Trends** in machine learning (ML) and graph neural networks (GNNs) over the last 2–3 weeks.
-  2. **Top Instruments/Symbols** discussed in recent market analyses.
-  3. Emerging **Graph ML Theories** and their practical applications.
-  4. **Connections** between graph learning, market forecasting, and network dynamics.
-  5. High-impact **publications and conferences** to follow in these domains.
+blacksmith_version: 1.0.0
+prompt: |-
+  Create a comprehensive research recommendation report for researchers and developers in financial markets who are interested in machine learning (ML) and graph neural networks (GNNs). Your report should focus on recent developments (within the last 2-3 weeks), and provide actionable insights on the following topics:
 
-  Prioritize actionable insights for researchers and developers in financial markets, focusing on:
-  - Predictive modeling
-  - Graph-based anomaly detection
-  - Sentiment analysis using GNNs
+  1. **Latest Trends**: Identify and explain the latest trends in ML and GNNs, with specific reference to predictive modeling, graph-based anomaly detection, and sentiment analysis using GNNs.
+  2. **Top Instruments/Symbols**: List and discuss the top instruments or symbols that have been highlighted in recent market analyses. Explain why these are significant.
+  3. **Emerging Graph ML Theories**: Describe any recently proposed Graph ML theories and provide examples of their practical applications.
+  4. **Connections**: Discuss the connections between graph learning, market forecasting, and network dynamics. Provide examples where possible.
+  5. **Publications and Conferences**: Highlight any high-impact publications or upcoming conferences in these domains that researchers should follow.
 
-  Structure your response into clearly defined sections, including:
-  - Abstract
-  - Key Findings
-  - References for Further Reading
+  Your report should be structured into the following sections:
 
+  - **Abstract**: A brief summary of the report's content.
+  - **Key Findings**: Detailed insights based on recent developments in the areas listed above.
+  - **References for Further Reading**: Provide a list of references that researchers can explore for more detailed information.
+
+  Ensure your report is based on verifiable sources and data. Provide citations where necessary.
+
+  ## Prompt Name/ID
+  ds-graph-ml-market-insights-v2.0
 config:
-  model: "gpt-4o, claude-3-5-sonnet-20240620, llama-3.3, mistral8x22b"
+  model: gpt-4o, claude-3-5-sonnet-20240620, llama-3.3, mistral8x22b
   temperature: 0.65
   max_tokens: 750
   top_p: 0.85
   frequency_penalty: 0.0
   presence_penalty: 0.1
-
-
-
 embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"  # optional, defaults to us-central1
-
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1
