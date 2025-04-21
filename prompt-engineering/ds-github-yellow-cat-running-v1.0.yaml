@@ -1,16 +1,23 @@
-timestamp: "2024-12-18T12:00:00"
+timestamp: '2024-12-18T12:00:00'
 name: ds-github-yellow-cat-running-v1.0
-prompt: "Explain the concept of LASSO regression in simple terms."
+prompt: |-
+  Write a brief explanation of the LASSO regression model for beginners in data science. Your explanation should:
+
+  1. Define LASSO regression in simple terms.
+  2. Discuss the fundamental concept behind LASSO regression, why it's important, and how it differs from other types of regression models.
+  3. Mention the situations where LASSO regression is particularly useful.
+  4. Briefly explain the mathematical basis of LASSO regression, but remember to keep it understandable for beginners.
+  5. Include a simple real-world example to illustrate how LASSO regression can be applied.
+
+  Ensure your explanation is clear, concise, and avoids technical jargon as much as possible. Aim for a length of around 300-500 words.
 config:
-  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  models: gpt-4o, mistral8x22b, llama3.3, claude3.5sonet
   temperature: 0.7
   max_tokens: 200
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-  
 embedding_model:
-  name: "projects/blacksmith-443107/locations/us-central1/endpoints/3234386076428664832"
-  project_id: "blacksmith-443107"
-  location: "us-central1"  # optional, defaults to us-central1
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1

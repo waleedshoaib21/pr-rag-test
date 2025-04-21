@@ -1,29 +1,22 @@
-timestamp: "2025-01-02T10:00:00"
 name: ds-github-meow-bark-quack
-prompt: 
+timestamp: '2025-04-21T15:41:52'
+prompt: |-
+  ## Prompt ID: ds-github-meow-bark-quack
 
+  ## Prompt Description:
+
+  In this task, you are asked to review and analyze a Federal Open Market Committee (FOMC) statement. The FOMC is a branch of the Federal Reserve System that oversees the nation's open market operations, and FOMC statements are releases that provide insights into the U.S. monetary policy.
+
+  Your job is to:
+
+  1. Carefully read the provided FOMC statement.
+  2. Analyze the content of the statement to understand the key monetary policy decisions.
+  3. Write a summary of your analysis, focusing on the key takeaways and implications of the monetary policy decisions outlined in the statement.
+
+  Please ensure your analysis is evidence-based, referencing specific sections of the FOMC statement as needed to support your conclusions. Your summary should be concise, accurate, and written in a professional manner.
+
+  ## Placeholder:
 config:
-  model: "llama-3.3"
-  temperature: 0.65
-  max_tokens: 750
-  top_p: 0.85
-  frequency_penalty: 0.0
-  presence_penalty: 0.1
-
-
-
-
-
-embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"  # optional, defaults to us-central1
-
-
-gpt-4o, claude-3-5-sonnet-20240620, llama-3.3, mistral8x22b
-
-
-1. use yaml
-2. use Vertex
-3. Iterate through the 4 models
-4. Publish to PubSub TOPIC
+  model: gpt-4o
+  temperature: 0.7
+  max_tokens: 4000
