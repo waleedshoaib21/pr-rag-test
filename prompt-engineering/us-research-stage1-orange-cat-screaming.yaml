@@ -1,8 +1,10 @@
-timestamp: "2024-03-20T12:00:00"
+timestamp: '2024-03-20T12:00:00'
 name: us-research-stage1-orange-cat-screaming
 blacksmith_version: 1.0.0
 research_stage: 1
-prompt: |
+prompt: |-
+  # Task
+
   Role: You are a sophisticated financial analyst and data scientist with expertise in market analysis, machine learning, and natural language processing.
 
   Scenario: Analyze the financial market over the past 100 days to understand its correlation, risks, strengths, weaknesses, opportunities, and threats (SWOT). Consider diverse data inputs including:
@@ -23,31 +25,42 @@ prompt: |
   4. Market Sentiment Score
   5. Visualization Recommendations
 
+
+  ## Output Format
+  Provide your analysis in a clear, structured format.
+
+  ## Requirements
+  - Be specific and detailed in your analysis
+  - Use concrete examples where appropriate
+  - Focus on key insights rather than general observations
+
+  ## Evidence Requirements
+  - Cite specific passages from the input where appropriate
+  - Avoid speculation beyond what is supported by the content
+  - Clearly distinguish between facts from the input and your interpretations
 config:
-  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  models: gpt-4o, mistral8x22b, llama3.3, claude3.5sonet
   temperature: 0.7
   max_tokens: 750
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-
 embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1
 metadata:
-  role: "Financial Analyst"
-  scenario: "Market Analysis and SWOT"
+  role: Financial Analyst
+  scenario: Market Analysis and SWOT
   inputs:
-    - Earnings announcements
-    - FOMC releases
-    - SEC filings
-    - Macroeconomic indicators
-    - News sentiment data
+  - Earnings announcements
+  - FOMC releases
+  - SEC filings
+  - Macroeconomic indicators
+  - News sentiment data
   outputs:
-    - Correlation analysis
-    - Risk assessment
-    - SWOT analysis
-    - Market sentiment score
-    - Visualizations
+  - Correlation analysis
+  - Risk assessment
+  - SWOT analysis
+  - Market sentiment score
+  - Visualizations

@@ -1,29 +1,13 @@
-timestamp: "2025-01-02T10:00:00"
 name: ds-github-meow-bark-quack
-prompt: 
-
+timestamp: '2025-04-21T17:36:55'
+prompt: This task is actually impossible to complete as the original prompt provided
+  is a placeholder and does not provide any information about the domain or purpose.
+  There is no specific context or topic to adhere to when creating the improved prompt.
+  Thus, the first step would be to get more information about the original intended
+  domain and purpose of the prompt. Only then, can an improved version of the prompt
+  be created that maintains the same domain and purpose as the original, but addresses
+  all weaknesses identified in the benchmarks.
 config:
-  model: "llama-3.3"
-  temperature: 0.65
-  max_tokens: 750
-  top_p: 0.85
-  frequency_penalty: 0.0
-  presence_penalty: 0.1
-
-
-
-
-
-embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"  # optional, defaults to us-central1
-
-
-gpt-4o, claude-3-5-sonnet-20240620, llama-3.3, mistral8x22b
-
-
-1. use yaml
-2. use Vertex
-3. Iterate through the 4 models
-4. Publish to PubSub TOPIC
+  model: gpt-4o
+  temperature: 0.7
+  max_tokens: 4000

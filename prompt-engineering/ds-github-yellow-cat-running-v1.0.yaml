@@ -1,16 +1,30 @@
-timestamp: "2024-12-18T12:00:00"
+timestamp: '2024-12-18T12:00:00'
 name: ds-github-yellow-cat-running-v1.0
-prompt: "Explain the concept of LASSO regression in simple terms."
+prompt: |-
+  ## Prompt
+  You are an AI model and your task is to explain the concept of LASSO regression in simple terms. Your explanation should include the following sections:
+
+  1. **Introduction**: Provide a brief overview of LASSO regression.
+
+  2. **Main Concept**: Explain what LASSO regression is, why it is used, and how it works.
+
+  3. **Key Features**: Detail the main characteristics and unique features of LASSO regression.
+
+  4. **Applications**: Provide examples of situations where LASSO regression can be applied.
+
+  5. **Comparison**: Compare and contrast LASSO regression with other types of regression analyses.
+
+  Your explanation should be easy to understand, even for individuals who do not have a background in statistics. Try to use everyday examples and analogies where possible. Avoid using technical jargon.
+
+  Ensure to provide evidence-backed explanations and refrain from making speculative or unsupported claims.
 config:
-  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  models: gpt-4o, mistral8x22b, llama3.3, claude3.5sonet
   temperature: 0.7
   max_tokens: 200
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-  
 embedding_model:
-  name: "projects/blacksmith-443107/locations/us-central1/endpoints/3234386076428664832"
-  project_id: "blacksmith-443107"
-  location: "us-central1"  # optional, defaults to us-central1
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1
