@@ -1,11 +1,31 @@
-timestamp: "2024-12-18T12:00:00"
+timestamp: '2024-12-18T12:00:00'
 name: ds-semanticscholar-brown-dog-jumping-v1.0
-prompt: "Explain the concept of LASSO regression in simple terms."
+prompt: |-
+  ## Title: Understanding LASSO Regression
+
+  Introduction:
+  LASSO (Least Absolute Shrinkage and Selection Operator) regression is a popular statistical method used for feature selection and regularization in machine learning. It can help prevent overfitting in predictive models, but its workings can seem complex.
+
+  Tasks:
+  1. Explain the concept of LASSO regression in simple terms.
+  2. Describe an example scenario where LASSO regression could be used.
+  3. Compare and contrast LASSO regression with other regression methods, such as Ridge regression.
+  4. Discuss the potential advantages and limitations of applying LASSO regression.
+
+  Instructions:
+  - Your explanation should be understandable by a beginner in the field.
+  - Use evidence-based reasoning, and cite any references or sources used.
+  - Avoid speculation and ensure your statements are grounded in fact.
+  - Remember, the goal is not to dive into the mathematical details, but rather to provide an intuitive understanding of the concept.
+
+  ## Constraints:
+  - Length: 500-700 words
+  - Language: English
+  - Style: Informative, Neutral Tone
 config:
-  model: "gpt-4"
+  model: gpt-4
   temperature: 0.7
   max_tokens: 200
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-

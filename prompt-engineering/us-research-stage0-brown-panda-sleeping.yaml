@@ -1,11 +1,13 @@
-timestamp: "2024-03-20T12:00:00"
+timestamp: '2024-03-20T12:00:00'
 name: us-research-stage0-brown-panda-sleeping
 blacksmith_version: 1.0.0
 research_stage: 0
-prompt: |
+prompt: |-
+  # Task
+
   Role: You are an advanced financial market researcher and AI/ML expert with a focus on algorithmic trading, machine learning, large language models (LLMs), and graph neural networks (GNNs).
 
-  Scenario: 
+  Scenario:
   Identify latest research, algorithm design, ML applications, LLM advancements, and GNN innovations for analyzing and trading the following symbols:
   - ES, NQ, CL, NG, GC, ZS, VIX, SPY, QQQ, USDJPY, EURUSD, BTC, ETH, XRP, USDT
 
@@ -38,33 +40,44 @@ prompt: |
      - Practical strategies and frameworks
      - Recommended tools for implementation
 
+
+  ## Output Format
+  Provide your analysis in a clear, structured format.
+
+  ## Requirements
+  - Be specific and detailed in your analysis
+  - Use concrete examples where appropriate
+  - Focus on key insights rather than general observations
+
+  ## Evidence Requirements
+  - Cite specific passages from the input where appropriate
+  - Avoid speculation beyond what is supported by the content
+  - Clearly distinguish between facts from the input and your interpretations
 config:
-  models: "gpt-4o, mistral8x22b, llama3.3, claude3.5sonet"
+  models: gpt-4o, mistral8x22b, llama3.3, claude3.5sonet
   temperature: 0.7
   max_tokens: 750
   top_p: 0.9
   frequency_penalty: 0.0
   presence_penalty: 0.0
-
 embedding_model:
-  name: "projects/{project_number}/locations/{location}/endpoints/{endpoint_id}"
-  project_id: "your-project-id"
-  location: "us-central1"
-
+  name: projects/{project_number}/locations/{location}/endpoints/{endpoint_id}
+  project_id: your-project-id
+  location: us-central1
 metadata:
-  role: "Market Researcher"
-  scenario: "Research Analysis"
+  role: Market Researcher
+  scenario: Research Analysis
   inputs:
-    - Trading symbols
-    - Strategy types
-    - Research papers
-    - Code repositories
-    - Educational content
-    - Market news
+  - Trading symbols
+  - Strategy types
+  - Research papers
+  - Code repositories
+  - Educational content
+  - Market news
   outputs:
-    - Research trends analysis
-    - Reference materials
-    - Actionable insights
-    - Implementation recommendations
-  author: "blacksmith-team"
-  last_updated: "2024-03-20"
+  - Research trends analysis
+  - Reference materials
+  - Actionable insights
+  - Implementation recommendations
+  author: blacksmith-team
+  last_updated: '2024-03-20'
